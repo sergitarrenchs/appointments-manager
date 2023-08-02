@@ -48,13 +48,15 @@ function Form({patients, setPatients, patient, setPatient}) {
         }
 
         if(patient.id){
-            patientObject.id = patient.io;
+            //Editing form input
+            patientObject.id = patient.id;
 
             const updatedPatients = patients.map(patientState => patientState.id === patient.id ? patientObject : patientState);
 
             setPatients(updatedPatients)
             setPatient({})
         }else {
+            //New from input
             patientObject.id = generateId();
             setPatients([...patients, patientObject]);  
         }
