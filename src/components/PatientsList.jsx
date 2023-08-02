@@ -1,5 +1,6 @@
-import Patient from "./patient"
+import Patient from "./Patient"
 
+//Coment
 function PatientsList({patients, setPatient, deletePatient}) {
 
   return (
